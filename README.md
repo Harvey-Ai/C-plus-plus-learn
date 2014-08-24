@@ -1,4 +1,3 @@
 C-_Study
 ========
-
-For study C++ language
+This is for studying the C++ language.
