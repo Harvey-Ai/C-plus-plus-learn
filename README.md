@@ -10,7 +10,7 @@ How to use it
 ------------
 The directory is organizated as below. Users learn the C++ by seeing files in include directory, and then check result by excute "./Tester".
 
-<strong>include</strong>: Every class consits of some knowlege points. <br>
+<strong>include</strong>: Every class consits of some learning tips. <br>
 <strong>test</strong>: Instantiate the classes. <br>
 <strong>makefile</strong>: <br>
 <strong>Tester</strong>: binrary file, for checking. <br>
