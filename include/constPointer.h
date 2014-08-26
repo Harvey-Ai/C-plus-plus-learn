@@ -8,6 +8,11 @@
 #ifndef CONSTPOINTER_H_
 #define CONSTPOINTER_H_
 
+/* learning tips
+ * 1. const point: decoreate type use const.
+ * 2. point to const: decoreate var use const.
+ */
+
 class constPointer: public rawClass
 {
 private:
@@ -30,7 +35,7 @@ void constPointer::doTest()
 	// intPtrConst = new(int);
 	*intPtrConst = 10;
 
-	cout << "intPtrConst->" << *intPtrConst << endl;
+	// cout << "intPtrConst->" << *intPtrConst << endl;
 }
 
 

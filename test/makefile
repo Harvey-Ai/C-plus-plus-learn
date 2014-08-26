@@ -6,7 +6,8 @@ target = Tester
 flag =  -g
 
 all: tester.cpp tester.h
-	g++ $(flag) tester.cpp -o $(target)
+	g++ $(flag) tester.cpp -c -o tester.o 
+	g++ *.o -o $(target)
 	
 .PHONY: clean
 

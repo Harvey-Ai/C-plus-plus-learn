@@ -15,59 +15,43 @@ using namespace std;
  * 2. operator new: only for allocate memory.
  * 3. placement new: construct obj in specified memory.
  */
+
 class operatorNew: public rawClass
 {
 private:
-	int value;
 	static list<operatorNew *> memList;
 
 public:
-	operatorNew();
-	~operatorNew();
 	static void* operator new(size_t size, operatorNew* ptr = NULL);
 	static void operator delete(void *p, size_t size);
 	void doTest();
 };
 list<operatorNew *> operatorNew::memList;
 
-operatorNew::operatorNew()
-{
-	value = 0;
-}
-
-operatorNew::~operatorNew()
-{
-}
-
-void operatorNew::doTest()
-{
-	operatorNew *p = new operatorNew();
-	p->value = 100;
-	cout << "Get a new obj.value=" << p->value << endl;
-
-	operatorNew *p2 = new(p) operatorNew;
-	p2->value = 1;
-	cout << "after palcement new, obj.value=" << p->value << endl;
-
-	assert(memList.size() == 2);
-	delete p;
-}
 
 void* operatorNew::operator new(size_t size, operatorNew* ptr)
 {
+	static int cnt = 0;
 	// get memory by malloc or new
 	if (ptr == NULL)
 	{
-		cout << "do operator new" << endl;
-		operatorNew *p = (operatorNew *)malloc(size);
-		// cout << "get " << size << " size by new" << endl;
-		// operatorNew *p = ::operator new(size);
+		operatorNew *p = NULL;
+		if (cnt % 2)
+		{
+			p = (operatorNew *)malloc(size);
+			cout << "use malloc set memory, " << p <<endl;
+		}
+		else
+		{
+			p = (operatorNew *)::operator new(size);
+			cout << "use operator new set memory, " << p << endl;
+		}
 		memList.push_back(p);
 		return p;
 	}
 	else
 	{
-		cout << "do a palcement new" << endl;
+		cout << "use exsit memory, palcement new" << endl;
 		return ptr;
 	}
 }
@@ -79,14 +63,24 @@ void operatorNew::operator delete(void *p, size_t size)
 	{
 		if (p == *it)
 		{
-			cout << "free value" << (*it)->value << endl;
+			cout << "free " << p << " by free" << endl;
 			free(*it);
-
-			// cout << "delete value" << (*it)->value << endl;
-			// ::operator delete (*it);
 			break;
 		}
 	}
+}
+
+void operatorNew::doTest()
+{
+	cout << endl;
+	cout << "----------- operator new test -----------" << endl;
+	operatorNew *p = new operatorNew();
+	cout << "adress p: " << p << endl;
+	operatorNew *p2 = new(p) operatorNew;
+	cout << "after palcement new, p2 == p ? " << (p == p2 ? "YES" : "NO") << endl;
+
+	assert(memList.size() == 2);
+	delete p;
 }
 
 #endif

@@ -4,10 +4,8 @@
 #include <iostream>
 using namespace std;
 
-// 1. static variable need defined outside the class.
-// 2. const variable except integral var need defined in parameter list
-
 /* learning tips
+ *
  * 1. static variable need defined outside the class, it is
  * declearation inside the class.
  * 2. static var or function belongs to whole class. In a static function,
@@ -39,9 +37,13 @@ singleton* singleton::getInstance()
 
 void singleton::doTest()
 {
+	cout << endl;
+	cout << "----------- singleton test -----------" << endl;
 	singleton *p1 = singleton::getInstance();
+	cout << "get object by a singleton class: " << p1 << endl;
 	singleton *p2 = singleton::getInstance();
-	assert(p1 == p2);
+	cout << "get object by a singleton class: " << p2 << endl;
+	cout << "p1 == p2 ? " << (p1 == p2 ? "YES" : "NO") << endl;
 }
 
 #endif
