@@ -6,6 +6,7 @@
 #include "../include/cFunctionCompileCall.h"
 #include "../include/unInheritedClass.h"
 #include "../include/classStorage.h"
+#include "../include/myString.h"
 using namespace std;
 
 static vector<rawClass*> testers;
@@ -16,6 +17,7 @@ static void loadTester()
 	testers.push_back(new constPointer());
 	testers.push_back(new cFunctionCall);
 	testers.push_back(new classStorage);
+	testers.push_back(new myString);
 }
 
 static void doTest()

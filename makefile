@@ -10,6 +10,6 @@ preCom:
 .PHONY: clean
 
 clean:
-	@make -C test
-	@rm "Tester"
-	@rm "./include/*.o"
+	-make clean -C test
+	-rm "Tester"
+	-rm "./include/*.o"

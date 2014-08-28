@@ -12,5 +12,4 @@ all: tester.cpp tester.h
 .PHONY: clean
 
 clean:
-	@rm *.o
-	@rm Tester
+	-rm *.o
