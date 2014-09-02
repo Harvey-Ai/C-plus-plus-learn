@@ -7,11 +7,13 @@
 #include "../include/unInheritedClass.h"
 #include "../include/classStorage.h"
 #include "../include/myString.h"
+#include "../include/basicGram.h"
 using namespace std;
 
 static vector<rawClass*> testers;
 static void loadTester()
 {
+	testers.push_back(new basicGram);
 	testers.push_back(new operatorNew);
 	testers.push_back(singleton::getInstance());
 	testers.push_back(new constPointer());
