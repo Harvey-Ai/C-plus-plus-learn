@@ -8,6 +8,9 @@
 #include "../include/classStorage.h"
 #include "../include/myString.h"
 #include "../include/basicGram.h"
+#include "../include/unInheritedClass.h"
+#include "../include/templateConcept.h"
+#include "../include/mySmartPoint.h"
 #include "../include/STL.h"
 using namespace std;
 
@@ -19,14 +22,19 @@ static void loadTester()
 	testers.push_back(new cFunctionCall);
 
 	// OO
-	testers.push_back(new operatorNew);
 	testers.push_back(singleton::getInstance());
 	testers.push_back(new constPointer());
-	testers.push_back(new classStorage);
+	testers.push_back(new unInheritedClass);
 	testers.push_back(new myString);
 
 	// GP
 	testers.push_back(new STL);
+	testers.push_back(new templateConcept);
+
+	// STORAGE
+	testers.push_back(new classStorage);
+	testers.push_back(new operatorNew);
+	//testers.push_back(new mySmartPoint);
 }
 
 static void doTest()

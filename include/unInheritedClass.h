@@ -8,6 +8,11 @@
 #ifndef UNINHERITEDCLASS_H_
 #define UNINHERITEDCLASS_H_
 
+#include <iostream>
+#include "rawClass.h"
+using namespace std;
+
+
 /* Learning tips: Virtual inherit, in C++, it is a technique for solving
  * the diamond inherit in multi-inherit. By the way, virtual inherited class's
  * construction have more priority than ordinal.
@@ -45,6 +50,20 @@ class classC: public classB
 
 };
 */
+
+class unInheritedClass: public rawClass
+{
+	public:
+		void doTest();
+};
+
+
+void unInheritedClass::doTest()
+{
+	cout << endl;
+	cout << "----------- Un-inherited class -----------" << endl;
+	cout << "classC is un-inheritable, YES" << endl;
+}
 
 
 #endif /* UNINHERITEDCLASS_H_ */

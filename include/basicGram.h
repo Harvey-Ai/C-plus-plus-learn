@@ -1,4 +1,5 @@
 #include <iostream>
+#include <climits>
 #include "rawClass.h"
 using namespace std;
 
@@ -50,4 +51,5 @@ void basicGram::doTest()
 	cout << "definedMarcoCond do not work. NO" << endl;
 #endif
 
+	cout << "int max: " << INT_MAX << endl;
 }

@@ -31,5 +31,4 @@ void STL::doTest()
 	myVector.resize(100);
 	cout << "after resize, (myVector.begin() == it) = " << (myVector.begin() == it) \
 			<< ", " << (myVector.begin() != it ? "YES" : "NO") << endl;
-
 }
