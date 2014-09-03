@@ -15,17 +15,17 @@
 using namespace std;
 
 
-/* learning tip: It is very good to write a string class by yourself, because it contains many
+/* Learning tip: It is very good to write a string class by yourself, because it contains many
  * trape in it, you need consider what to return a pointer, common or a citation type, and it
  * need a const qualifier? and so on.
  *
- * 1. the copy construct function's parameter must be a citation type, in case of endless call.
- * 2. use const parameter as much as possible, because non-constant argument can call
+ * 1. The copy construct function's parameter must be a citation type, in case of endless call.
+ * 2. Use const parameter as much as possible, because non-constant argument can call
  * const parameter, such as myString(const myString &str) can accept temporary var,
  * otherwise not.
- * 3. copy citation variable if the object is large, in such case can escape copy excution.
- * 4. return citation variable if there need consecutive operation, or assignment.
- * 5. it need carefully check the self-copy or NULL pointer.
+ * 3. Copy citation variable if the object is large, in such case can escape copy excution.
+ * 4. Return citation variable if there need consecutive operation, or assignment.
+ * 5. It need carefully check the self-copy or NULL pointer.
  *
  */
 

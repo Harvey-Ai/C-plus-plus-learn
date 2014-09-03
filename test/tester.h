@@ -22,7 +22,6 @@ static void loadTester()
 	testers.push_back(new operatorNew);
 	testers.push_back(singleton::getInstance());
 	testers.push_back(new constPointer());
-	testers.push_back(new cFunctionCall);
 	testers.push_back(new classStorage);
 	testers.push_back(new myString);
 

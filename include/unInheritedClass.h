@@ -8,7 +8,7 @@
 #ifndef UNINHERITEDCLASS_H_
 #define UNINHERITEDCLASS_H_
 
-/* learning tips: virtual inherit, in C++, it is a technique for solving
+/* Learning tips: Virtual inherit, in C++, it is a technique for solving
  * the diamond inherit in multi-inherit. By the way, virtual inherited class's
  * construction have more priority than ordinal.
  *

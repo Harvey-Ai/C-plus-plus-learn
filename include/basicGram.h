@@ -2,6 +2,14 @@
 #include "rawClass.h"
 using namespace std;
 
+
+/* Learning tips : be careful of the type conversion in C.
+ *
+ * 1. In the "? :" operation, the result type is depend on both last two operands.
+ *
+ */
+
+
 class basicGram: public rawClass
 {
 	private:

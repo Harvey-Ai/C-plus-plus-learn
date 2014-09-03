@@ -10,11 +10,12 @@
 #include "rawClass.h"
 using namespace std;
 
-/* learning tips
- * 1. new operator: for allocate memory and construct obj
- * 2. operator new: only for allocate memory.
- * 3. placement new: construct obj in specified memory.
- * 4. operator new and delete is always static.
+/* Learning tips
+ *
+ * 1. New operator: for allocate memory and construct obj.
+ * 2. Operator new: only for allocate memory.
+ * 3. Placement new: construct obj in specified memory.
+ * 4. Operator new and delete is always static.
  */
 
 class operatorNew: public rawClass

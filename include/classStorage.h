@@ -11,12 +11,12 @@
 #include <iostream>
 using namespace std;
 
-/* learning tips: virtual function and virtual inherit is RTTI(Run-Time Type Identification)
+/* Learning tips: Virtual function and virtual inherit is RTTI(Run-Time Type Identification)
  * techniques in C++. And it cost more storage to do this, virtual table.
  *
- * 1. if class has virtual function, class will contain a virtual table
+ * 1. If class has virtual function, class will contain a virtual table
  * pointer, the virtual table don't occupy the class's storage.
- * 2. if class has virtual inherite, class will contain a virtual class table
+ * 2. If class has virtual inherite, class will contain a virtual class table
  * pointer.
  */
 

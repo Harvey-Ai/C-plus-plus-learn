@@ -4,14 +4,11 @@
 #include <iostream>
 using namespace std;
 
-/* learning tips
+/* Learning tips
  *
- * 1. static variable need defined outside the class, it is
- * declearation inside the class.
- * 2. static var or function belongs to whole class. In a static function,
- * no this pointer exists.
- * 3. const static variable except integral var need initialized
- *  in parameter list.
+ * 1. Static variable need defined outside the class, it is declearation inside the class.
+ * 2. Static var or function belongs to whole class. In a static function, no this pointer exists.
+ * 3. Const static variable except integral var need initialized in parameter list.
  */
 
 class singleton: public rawClass
