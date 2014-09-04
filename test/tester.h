@@ -1,40 +1,37 @@
 #include <vector>
-#include "../include/rawClass.h"
-#include "../include/operatorNew.h"
-#include "../include/singleton.h"
-#include "../include/constPointer.h"
-#include "../include/cFunctionCompileCall.h"
-#include "../include/unInheritedClass.h"
-#include "../include/classStorage.h"
-#include "../include/myString.h"
-#include "../include/basicGram.h"
-#include "../include/unInheritedClass.h"
-#include "../include/templateConcept.h"
-#include "../include/mySmartPoint.h"
-#include "../include/STL.h"
+#include "../include/rawTester.h"
+#include "../include/operatorNewTester.h"
+#include "../include/singletonTester.h"
+#include "../include/cFunctionCompileCallTester.h"
+#include "../include/unInheritedClassTester.h"
+#include "../include/classStorageTester.h"
+#include "../include/myStringTester.h"
+#include "../include/basicGramTester.h"
+#include "../include/templateConceptTester.h"
+#include "../include/mySmartPointTester.h"
+#include "../include/mySTLTester.h"
 using namespace std;
 
-static vector<rawClass*> testers;
+static vector<rawTester*> testers;
 static void loadTester()
 {
 	// C
-	testers.push_back(new basicGram);
-	testers.push_back(new cFunctionCall);
+	testers.push_back(new basicGramTester);
+	testers.push_back(new cFunctionCallTester);
 
 	// OO
-	testers.push_back(singleton::getInstance());
-	testers.push_back(new constPointer());
-	testers.push_back(new unInheritedClass);
-	testers.push_back(new myString);
+	testers.push_back(new singletonTester);
+	testers.push_back(new unInheritedClassTester);
+	testers.push_back(new myStringTester);
 
 	// GP
-	testers.push_back(new STL);
-	testers.push_back(new templateConcept);
+	testers.push_back(new mySTLTester);
+	testers.push_back(new templateConceptTester);
 
 	// STORAGE
-	testers.push_back(new classStorage);
-	testers.push_back(new operatorNew);
-	//testers.push_back(new mySmartPoint);
+	testers.push_back(new classStorageTester);
+	testers.push_back(new operatorNewTester);
+	testers.push_back(new mySmartPointTester);
 }
 
 static void doTest()
