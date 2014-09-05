@@ -79,7 +79,7 @@ void mySTLTester::doTest()
 	// 3. Make pair, pair is a struct in STL, map are constructed by those.
 	pair<int, double> p1;
 	p1 = make_pair(1, 1.1);
-	cout << p1.first << " " << p1.second << "YES" << endl;
+	// cout << p1.first << " " << p1.second << "YES" << endl;
 	map<int, double> intMap;
 	intMap.insert(p1);
 	cout << "Map value = " << intMap[p1.first] << ", "

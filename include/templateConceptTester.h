@@ -60,7 +60,7 @@ string myTemplateFunction(T a, T b)
 	string s;
 	ss << n;
 	ss >> s;
-	return "This is no-call call " + s;
+	return "This is no-call type " + s;
 }
 
 template<class T>
