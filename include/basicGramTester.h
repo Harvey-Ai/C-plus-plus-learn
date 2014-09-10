@@ -1,5 +1,6 @@
 #include <iostream>
 #include <climits>
+#include <string>
 #include "rawTester.h"
 using namespace std;
 
@@ -33,9 +34,9 @@ namespace basicGram
 class fatherClass
 {
 	public:
-		int a;
+		string name;
 		fatherClass(){
-			a = 10;
+			name = "fatherClass";
 		};
 		virtual int fa() { return 2; }
 };
@@ -43,7 +44,12 @@ class fatherClass
 class derivedClass: public fatherClass
 {
 	public:
-		//int b;
+		string name;
+
+		derivedClass()
+		{
+			name = "derivedClass";
+		}
 };
 
 }
@@ -134,6 +140,8 @@ void basicGramTester::doTest()
 
 	// dynamic_cast if used for downcasting, it is safer than static_cast.
 	// Virtual function is needed; !But it may crash in run-time.
-	// myDerive = dynamic_cast<basicGram::derivedClass &>(myFather);
-	 cout << "myDerive.a = " << myDerive.a << ", " << (myDerive.a == 10 ? "YES" : "NO") << endl;
+	basicGram::fatherClass *pf = &myDerive;
+	basicGram::derivedClass *pd = dynamic_cast<basicGram::derivedClass *>(pf);
+	cout << "Downcasting succeed, myDerive.name = " << myDerive.name << ", " <<
+			(myDerive.name == "derivedClass" ? "YES" : "NO") << endl;
 }
