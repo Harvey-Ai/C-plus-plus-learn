@@ -10,6 +10,7 @@
 #include "../include/templateConceptTester.h"
 #include "../include/mySmartPointTester.h"
 #include "../include/mySTLTester.h"
+#include "../include/myInorderIterator.h"
 using namespace std;
 
 static vector<rawTester*> testers;
@@ -18,6 +19,7 @@ static void loadTester()
 	// C
 	testers.push_back(new basicGramTester);
 	testers.push_back(new cFunctionCallTester);
+	testers.push_back(new myInorderIteratorTester);
 
 	// OO
 	testers.push_back(new singletonTester);

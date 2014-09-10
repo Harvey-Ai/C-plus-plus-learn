@@ -17,6 +17,7 @@ using namespace std;
  * 4. ! Function partial is not allow on my compiler.
  * 5. Application will use oridinal -> partial specific -> specific -> instantiation, in all,
  * application use function will more restriction.
+ * 6. Unlike RTTI, template technology is to generate the code in compile stage.
  *
  */
 

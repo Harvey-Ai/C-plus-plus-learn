@@ -14,7 +14,6 @@
  *
  * 1. Smart point only used for the heap object, it is to encapsulate the storage in heap.
  * 2. The storage layout is to use stack point to maintain the heap object.
- *
  */
 
 template<class T>
