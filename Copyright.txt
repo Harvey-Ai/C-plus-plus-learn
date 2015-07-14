@@ -22,9 +22,6 @@ License.txt or online at
 To obtain a copy, write to the Free Software Foundation, Inc.,
 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 
-Disclaimer
-----------
-Authors make no representations about the suitability or fitness of this software for any purpose. It is provided "as is" without express or implied warranty.
 ---------------------------------------------------------------------
 
 Authors

@@ -1,17 +1,26 @@
-C-_Study
+C plus plus learn
 ========
-This is for studying the C++ language. C++ is a language federa， which is consist of the procedure programming, OO programming, generic programming and even functional programming in C11.
+Personal C++ training course, people who want use it can just download it freely.I will cover four area: OO, generic programming, Grammar, and Compound.
+
 
 Content
------------
-unInherited Class, class Storage, C function symbol, operator new, singleton class
-, string class, smart point
+---------
+  - UnInherited Class 【OO】
+  - Class Storage 【Complier】
+  - C function symbol 【Complier】
+  - operator new & new operator 【Grammar】
+  - singleton class 【OO】
+  - string class  【Compound】
+  - smart point 【OO】
 
-How to use it
+How to Use
 ------------
-The directory is organizated as below. Users learn the C++ by seeing files in include directory, and then check result by excute "./Tester".
+  - Download
+  - Type "make" in the shell
+  - Learn .h file in include directory
+  - Type "./Tester", run the test case. 
 
-<strong>include</strong>: Every class consits of some learning tips. <br>
-<strong>test</strong>: Instantiate the classes. <br>
-<strong>makefile</strong>: <br>
-<strong>Tester</strong>: binrary file, for checking. <br>
+Directory arragement
+------------
+<strong>include</strong> - One .h file consits one learning tip. <br>
+<strong>test</strong>: The learning tips' test cpp <br>
