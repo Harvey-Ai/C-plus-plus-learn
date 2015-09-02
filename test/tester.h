@@ -11,6 +11,7 @@
 #include "../include/mySmartPointTester.h"
 #include "../include/mySTLTester.h"
 #include "../include/myInorderIterator.h"
+#include "../include/exceptionHandlerTester.h"
 using namespace std;
 
 static vector<rawTester*> testers;
@@ -34,6 +35,9 @@ static void loadTester()
 	testers.push_back(new classStorageTester);
 	testers.push_back(new operatorNewTester);
 	testers.push_back(new mySmartPointTester);
+
+	// EXCEPTION
+	testers.push_back(new exceptionHandlerTester);
 }
 
 static void doTest()

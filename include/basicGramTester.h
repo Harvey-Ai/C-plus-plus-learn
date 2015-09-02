@@ -8,6 +8,7 @@ using namespace std;
 /* Learning tips : See below
  */
 
+
 class explicitTester
 {
 	private:
@@ -18,6 +19,20 @@ class explicitTester
 		explicit explicitTester(int *v) { value = *v;}
 };
 
+
+class constTester
+{
+	public:
+		int a = 1;
+		void fun() const
+		{
+			cout << "const fun" << endl;
+		}
+		void fun()
+		{
+			cout << "no const fun" << endl;
+		}
+};
 
 class basicGramTester: public rawTester
 {
@@ -144,4 +159,24 @@ void basicGramTester::doTest()
 	basicGram::derivedClass *pd = dynamic_cast<basicGram::derivedClass *>(pf);
 	cout << "Downcasting succeed, myDerive.name = " << myDerive.name << ", " <<
 			(myDerive.name == "derivedClass" ? "YES" : "NO") << endl;
+
+	// reference type:
+	// 1. reference var must be initialized.
+	// 2. reference var can change.
+	int var1 = 1;
+	int var2 = 2;
+	// int &a;
+	int &ref = var1;
+	cout << "reference A(&b): " << ref << endl;
+	ref = var2;
+	cout << "change A to &c: " << ref << endl;
+
+	// const pointer & no const pointer
+	// const attr is judged by pointer, and can be changed by noConst pointer.
+	const constTester oneTester;
+	const constTester *constP = &oneTester;
+	constP->fun();
+	constTester *noConstP = const_cast<constTester *>(constP);
+	noConstP->fun();
+	noConstP->a = 100;
 }

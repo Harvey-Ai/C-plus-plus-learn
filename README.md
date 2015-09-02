@@ -1,7 +1,6 @@
 C plus plus learn
 ========
-Personal C++ training course, people who want use it can just download it freely.I will cover four area: OO, generic programming, Grammar, and Compound.
-
+C++ training course, download it, type "make" and "./Tester". Hope you have a good journey in learning C++.
 
 Content
 ---------
@@ -17,8 +16,8 @@ How to Use
 ------------
   - Download
   - Type "make" in the shell
-  - Learn .h file in include directory
-  - Type "./Tester", run the test case. 
+  - Every knowledge has its tips comment in .h file, learn it and think about the output.
+  - Type "./Tester", run the test case. Check if your thought is correct, if not return to previous step to think more until understand. 
 
 Directory arragement
 ------------
