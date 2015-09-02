@@ -1,4 +1,4 @@
-C plus plus learn
+Cxx_learn
 ========
 C++ training course, download it, type "make" and "./Tester". Hope you have a good journey in learning C++.
 
